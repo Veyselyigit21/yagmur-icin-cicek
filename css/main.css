@@ -10,6 +10,16 @@
   }
 }
 
+/* === YENİ ARKA PLAN ANİMASYONU === */
+@keyframes move-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 /* Alt Başlık (Önce gelecek) */
 .subtitle {
   font-family: 'Dancing Script', cursive;
@@ -111,6 +121,9 @@ body {
       transparent 22px
     ),
     linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+
+  /* === HAREKETLİ ARKA PLAN EKLENDİ === */
+  animation: move-background 60s linear infinite;
 }
 
 .flowers {
