@@ -1,3 +1,60 @@
+/* === [1] ANİMASYON VE BAŞLIK STİLLERİ EKLENDİ === */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ana Başlık (Sonra gelecek) */
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 8vmin;
+  color: #a7ffee;
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  text-shadow: 0 0 15px rgba(167, 255, 238, 0.7);
+  
+  /* Animasyon: 1.5s sürsün, 1.0s beklesin (diğerinden sonra) */
+  opacity: 0;
+  animation: fade-in-up 1.5s ease-out 1.0s forwards;
+  
+  /* ÖNEMLİ: Bu, dosyanın sonundaki "paused" kuralını ezer */
+  animation-play-state: running !important;
+}
+
+/* Alt Başlık (Önce gelecek) */
+.subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 5vmin;
+  color: #a7ffee;
+  opacity: 0.8;
+  text-align: center;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  
+  /* Animasyon: 1.5s sürsün, 0.5s beklesin (ilk bu gelecek) */
+  opacity: 0;
+  animation: fade-in-up 1.5s ease-out 0.5s forwards;
+
+  /* ÖNEMLİ: Bu, dosyanın sonundaki "paused" kuralını ezer */
+  animation-play-state: running !important;
+}
+
+/* === [2] MEVCUT CSS KODUNUZ BURADAN BAŞLIYOR === */
 *,
 *::after,
 *::before {
