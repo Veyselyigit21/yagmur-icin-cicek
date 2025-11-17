@@ -48,7 +48,7 @@
   animation: fade-in-up 1.5s ease-out 1.0s forwards;
 }
 
-/* === [2] ESKİ KODUNUZ (DONDURMA KODU SİLİNMİŞ HALİ) === */
+/* === [2] MEVCUT CSS KODUNUZ BURADAN BAŞLIYOR === */
 *,
 *::after,
 *::before {
@@ -1602,12 +1602,6 @@ body {
   }
 }
 
-/* === [3] BU BLOK SİLİNDİ ===
-  (Çiçekleri donduran kod buydu)
-.container * {
-  -webkit-animation-play-state: paused !important;
-  animation-play-state: paused !important;
-} 
-*/
+/* === [3] DONDURAN KOD SİLİNDİ === */
 
 /*# sourceMappingURL=main.css.map */
